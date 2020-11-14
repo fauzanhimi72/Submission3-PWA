@@ -72,7 +72,7 @@ if (workbox) {
 
   //register all logo in logos folder with cachefirst strategies
   workbox.routing.registerRoute(
-    new RegExp('/images/'),
+    new RegExp('images/'),
   new CacheFirst({
       cacheName: 'supersoccer-img',
     })
@@ -80,7 +80,7 @@ if (workbox) {
 
     //register all file in pages folder using staleWhileRevalidate strategies
     workbox.routing.registerRoute(
-      new RegExp('/pages/'),
+      new RegExp('pages/'),
     new StaleWhileRevalidate({
         cacheName: "pages"
       })
@@ -105,7 +105,7 @@ self.addEventListener('push', function(event) {
   }
   var options = {
     body: body,
-    icon: 'img/favicon.png',
+    icon: 'images/favicon.png',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
