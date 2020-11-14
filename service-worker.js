@@ -69,8 +69,6 @@ if (workbox) {
 
   const {registerRoute} = workbox.routing;
   const {StaleWhileRevalidate, NetworkFirst, CacheFirst} = workbox.strategies;
-  const {CacheableResponsePlugin} = workbox.cacheableResponse;
-  const {ExpirationPlugin} = workbox.expiration;
 
   //register all logo in logos folder with cachefirst strategies
   workbox.routing.registerRoute(
